@@ -201,76 +201,76 @@ function ServicesContent() {
           <p className="text-xs text-muted-foreground">{t("حاول إدخال كلمات مفتاحية أخرى أو تغيير خيارات التصنيف.", "Try searching another phrase or resetting filters.")}</p>
         </div>
       ) : viewMode === "grid" ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
           {filteredServices.map((service) => {
             const tierInfo = getTierBadge(service.tier);
             return (
               <div
                 key={service.id}
-                className="bg-card border border-border rounded-2xl p-4 sm:p-5 md:p-6 flex flex-col justify-between glow-card relative overflow-hidden"
+                className="bg-card border border-border rounded-2xl p-3 sm:p-4 md:p-5 flex flex-col justify-between glow-card relative overflow-hidden"
               >
-                <div className="space-y-3 sm:space-y-4">
+                <div className="space-y-2 sm:space-y-3">
                   {/* Icon & Tier Badge */}
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="p-2.5 sm:p-3 bg-indigo-500/10 rounded-xl text-indigo-500 shrink-0">
-                      <DynamicIcon name={service.icon} className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <div className="flex items-start justify-between gap-1.5">
+                    <div className="p-2 sm:p-2.5 bg-indigo-500/10 rounded-xl text-indigo-500 shrink-0">
+                      <DynamicIcon name={service.icon} className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
-                    <span className={`text-[10px] px-2 py-0.5 rounded-full border font-bold whitespace-nowrap shrink-0 ${tierInfo.color}`}>
+                    <span className={`text-[10px] px-1.5 py-0.5 rounded-full border font-bold whitespace-nowrap shrink-0 ${tierInfo.color}`}>
                       {t(tierInfo.textAr, tierInfo.textEn)}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-base sm:text-lg font-bold text-foreground leading-tight line-clamp-2">
+                  <h3 className="text-xs sm:text-sm md:text-base font-bold text-foreground leading-tight line-clamp-2">
                     {t(service.nameAr, service.nameEn)}
                   </h3>
 
-                  {/* Description */}
-                  <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3">
+                  {/* Description - Hidden on very small mobile, shown on larger screens */}
+                  <p className="text-[10px] sm:text-xs text-muted-foreground leading-relaxed line-clamp-2 hidden sm:block">
                     {t(service.descAr, service.descEn)}
                   </p>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-1.5 pt-1">
-                    {service.tags.slice(0, 4).map((tag, idx) => (
+                  {/* Tags - Limited on mobile */}
+                  <div className="flex flex-wrap gap-1 pt-0.5">
+                    {service.tags.slice(0, 2).map((tag, idx) => (
                       <span
                         key={idx}
-                        className="text-[10px] px-2 py-0.5 rounded-full bg-muted text-muted-foreground font-medium"
+                        className="text-[10px] px-1.5 py-0.5 rounded-full bg-muted text-muted-foreground font-medium"
                       >
                         {tag}
                       </span>
                     ))}
-                    {service.tags.length > 4 && (
-                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-muted text-muted-foreground font-medium">
-                        +{service.tags.length - 4}
+                    {service.tags.length > 2 && (
+                      <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-muted text-muted-foreground font-medium">
+                        +{service.tags.length - 2}
                       </span>
                     )}
                   </div>
                 </div>
 
                 {/* Price & Actions */}
-                <div className="pt-4 border-t border-border mt-4 sm:mt-6 flex flex-col gap-3">
+                <div className="pt-3 border-t border-border mt-3 sm:mt-4 flex flex-col gap-2">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="text-[10px] text-muted-foreground">{t("نطاق السعر", "Price Range")}</div>
-                      <div className="text-sm sm:text-base font-extrabold text-gradient-primary">
+                      <div className="text-xs sm:text-sm font-extrabold text-gradient-primary">
                         {service.priceMin}$ - {service.priceMax}$
                         {service.pricePlus && " +"}
                       </div>
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-2 gap-1.5">
                     <Link
                       href={`/services/${service.slug}`}
-                      className="px-3 py-2.5 border border-border hover:bg-muted hover:border-primary/30 text-foreground text-xs font-bold rounded-xl text-center transition-all flex items-center justify-center gap-1"
+                      className="px-2 py-2 border border-border hover:bg-muted hover:border-primary/30 text-foreground text-[10px] sm:text-xs font-bold rounded-xl text-center transition-all flex items-center justify-center gap-1"
                     >
                       <span>{t("التفاصيل", "Details")}</span>
                     </Link>
                     <Link
                       href={`/contact?service=${service.slug}`}
-                      className="px-3 py-2.5 bg-primary hover:bg-primary/90 text-white text-xs font-bold rounded-xl text-center shadow-md shadow-primary/20 transition-all flex items-center justify-center gap-1"
+                      className="px-2 py-2 bg-primary hover:bg-primary/90 text-white text-[10px] sm:text-xs font-bold rounded-xl text-center shadow-md shadow-primary/20 transition-all flex items-center justify-center gap-1"
                     >
-                      <span>{t("اطلب الآن", "Order")}</span>
+                      <span>{t("اطلب", "Order")}</span>
                     </Link>
                   </div>
                 </div>

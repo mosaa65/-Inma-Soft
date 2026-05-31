@@ -116,20 +116,20 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {categories.map((category) => (
             <Link
               key={category.id}
               href={`/services?category=${category.slug}`}
-              className="group bg-card border border-border p-6 rounded-2xl glow-card block hover:border-primary/30 transition-all duration-300"
+              className="group bg-card border border-border p-4 lg:p-6 rounded-2xl glow-card block hover:border-primary/30 transition-all duration-300"
             >
-              <div className={`w-12 h-12 rounded-xl bg-muted flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110 ${category.color}`}>
-                <DynamicIcon name={category.icon} className="w-6 h-6" />
+              <div className={`w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-muted flex items-center justify-center mb-4 lg:mb-6 transition-all duration-300 group-hover:scale-110 ${category.color}`}>
+                <DynamicIcon name={category.icon} className="w-5 h-5 lg:w-6 lg:h-6" />
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+              <h3 className="text-sm lg:text-lg font-bold text-foreground mb-1 lg:mb-2 group-hover:text-primary transition-colors line-clamp-2">
                 {t(category.nameAr, category.nameEn)}
               </h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">
+              <p className="text-[10px] lg:text-xs text-muted-foreground leading-relaxed line-clamp-2">
                 {t(category.descAr, category.descEn)}
               </p>
             </Link>
@@ -301,7 +301,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <a
-              href="https://wa.me/966500000000"
+              href="https://wa.me/967772217218"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-4 text-base font-bold bg-white text-indigo-700 hover:bg-indigo-50 rounded-xl shadow-lg transition-all duration-200 hover:-translate-y-0.5"
