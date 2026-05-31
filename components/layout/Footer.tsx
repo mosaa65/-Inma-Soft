@@ -118,8 +118,8 @@ export default function Footer() {
               <Mail className="w-5 h-5 text-indigo-500 mt-0.5" />
               <div>
                 <p className="text-xs text-muted-foreground">{t("البريد الإلكتروني", "Email Address")}</p>
-                <a href="mailto:info@inmasoft.com" className="text-sm hover:text-primary transition-colors">
-                  info@inmasoft.com
+                <a href="mailto:mousa.mc13@gmail.com" className="text-sm hover:text-primary transition-colors break-all">
+                  mousa.mc13@gmail.com
                 </a>
               </div>
             </div>
@@ -127,8 +127,8 @@ export default function Footer() {
               <Phone className="w-5 h-5 text-indigo-500 mt-0.5" />
               <div>
                 <p className="text-xs text-muted-foreground">{t("الهاتف", "Phone Number")}</p>
-                <a href="tel:+966500000000" className="text-sm hover:text-primary transition-colors" dir="ltr">
-                  +966 50 000 0000
+                <a href="tel:+967772217218" className="text-sm hover:text-primary transition-colors" dir="ltr">
+                  +967 772 217 218
                 </a>
               </div>
             </div>
@@ -137,13 +137,13 @@ export default function Footer() {
               <div>
                 <p className="text-xs text-muted-foreground">{t("واتساب مباشر", "WhatsApp Support")}</p>
                 <a
-                  href="https://wa.me/966500000000"
+                  href="https://wa.me/967772217218"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-emerald-500 hover:text-emerald-400 font-medium transition-colors"
                   dir="ltr"
                 >
-                  +966 50 000 0000
+                  +967 772 217 218
                 </a>
               </div>
             </div>

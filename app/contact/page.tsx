@@ -92,8 +92,8 @@ function ContactContent() {
               </div>
               <div className="space-y-1">
                 <div className="text-[10px] text-muted-foreground">{t("راسلنا عبر البريد الإلكتروني", "Email Address")}</div>
-                <a href="mailto:info@inmasoft.com" className="text-sm font-bold hover:text-primary transition-colors">
-                  info@inmasoft.com
+                <a href="mailto:mousa.mc13@gmail.com" className="text-sm font-bold hover:text-primary transition-colors break-all">
+                  mousa.mc13@gmail.com
                 </a>
               </div>
             </div>
@@ -104,8 +104,8 @@ function ContactContent() {
               </div>
               <div className="space-y-1">
                 <div className="text-[10px] text-muted-foreground">{t("اتصل بنا مباشرة", "Phone Support")}</div>
-                <a href="tel:+966500000000" className="text-sm font-bold hover:text-primary transition-colors" dir="ltr">
-                  +966 50 000 0000
+                <a href="tel:+967772217218" className="text-sm font-bold hover:text-primary transition-colors" dir="ltr">
+                  +967 772 217 218
                 </a>
               </div>
             </div>
@@ -117,13 +117,13 @@ function ContactContent() {
               <div className="space-y-1">
                 <div className="text-[10px] text-muted-foreground">{t("تواصل معنا عبر واتساب", "WhatsApp direct")}</div>
                 <a
-                  href="https://wa.me/966500000000"
+                  href="https://wa.me/967772217218"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-bold text-emerald-500 hover:text-emerald-400 transition-colors"
                   dir="ltr"
                 >
-                  +966 50 000 0000
+                  +967 772 217 218
                 </a>
               </div>
             </div>
